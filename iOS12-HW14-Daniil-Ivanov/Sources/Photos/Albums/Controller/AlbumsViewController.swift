@@ -7,6 +7,10 @@
 
 import UIKit
 
+fileprivate enum Constants {
+    static let myAlbumsSectionHeaderTitle = "My Albums"
+}
+
 final class AlbumsViewController: UIViewController {
     private var albums: [Album]?
 
@@ -56,5 +60,13 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as? AlbumCollectionViewCell
         cell?.data = albums?[indexPath.row]
         return cell ?? AlbumCollectionViewCell()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: ElementKind.sectionHeader, withReuseIdentifier: AlbumsSectionHeader.identifier, for: indexPath) as? AlbumsSectionHeader
+        header?.isSeeAllButtonHidden = false
+        header?.title = Constants.myAlbumsSectionHeaderTitle
+
+        return header ?? AlbumsSectionHeader()
     }
 }

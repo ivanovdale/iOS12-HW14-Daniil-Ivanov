@@ -29,9 +29,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             imageView.image = UIImage(named: data.mainPhotoName)
             titleLabel.text = data.title
             countLabel.text = String(data.photoCount)
-            if data.isFavorite {
-                addFavoriteImage()
-            }
+            favoriteImageView.isHidden = !data.isFavorite
         }
     }
 
@@ -87,7 +85,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        [imageView, infoStack].forEach { addSubview($0) }
+        [imageView, infoStack, favoriteImageView].forEach { addSubview($0) }
     }
 
     private func setupLayout() {
@@ -100,13 +98,16 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             make.top.equalTo(imageView.snp.bottom).offset(Constants.infoStackOffset)
             make.leading.bottom.equalTo(self)
         }
-    }
-
-    private func addFavoriteImage() {
-        addSubview(favoriteImageView)
         favoriteImageView.snp.makeConstraints { make in
             make.leading.equalTo(imageView).offset(Constants.favoriteImageViewOffset)
             make.bottom.equalTo(imageView).offset(-Constants.favoriteImageViewOffset)
         }
+    }
+
+    // MARK: - Reuse
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        favoriteImageView.isHidden = true
     }
 }

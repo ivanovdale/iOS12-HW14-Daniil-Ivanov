@@ -19,6 +19,7 @@
 		00BE61932B70F050005E2C42 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 00BE61922B70F050005E2C42 /* SnapKit */; };
 		00BE61962B7103E8005E2C42 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61952B7103E8005E2C42 /* TabBarController.swift */; };
 		00BE61982B71057F005E2C42 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61972B71057F005E2C42 /* EmptyViewController.swift */; };
+		00BE619A2B7113A9005E2C42 /* AlbumsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		00BE61952B7103E8005E2C42 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		00BE61972B71057F005E2C42 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				00BE61882B70DF27005E2C42 /* AlbumsView.swift */,
 				00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */,
+				00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				00BE61702B70DBC2005E2C42 /* AlbumsViewController.swift in Sources */,
 				00BE616C2B70DBC2005E2C42 /* AppDelegate.swift in Sources */,
+				00BE619A2B7113A9005E2C42 /* AlbumsSectionHeader.swift in Sources */,
 				00BE618E2B70E683005E2C42 /* AlbumsFactory.swift in Sources */,
 				00BE61892B70DF27005E2C42 /* AlbumsView.swift in Sources */,
 				00BE616E2B70DBC2005E2C42 /* SceneDelegate.swift in Sources */,

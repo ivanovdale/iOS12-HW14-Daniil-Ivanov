@@ -16,6 +16,7 @@ class AlbumsView: UIView {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
+        collectionView.register(AlbumsSectionHeader.self, forSupplementaryViewOfKind: ElementKind.sectionHeader, withReuseIdentifier: AlbumsSectionHeader.identifier)
         return collectionView
     }()
 
@@ -66,11 +67,24 @@ class AlbumsView: UIView {
             let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: layoutItem, count: 2)
             layoutGroup.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
 
+            let layoutSectionHeader = createLayoutSectionHeader()
             let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
             layoutSection.orthogonalScrollingBehavior = .groupPaging
             layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 0)
+            layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
 
             return layoutSection
         }
+
+        func createLayoutSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+            let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.97), heightDimension: .estimated(45))
+            let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: layoutSectionHeaderSize,
+                elementKind: ElementKind.sectionHeader,
+                alignment: .top
+            )
+            return layoutSectionHeader
+        }
     }
 }
+
