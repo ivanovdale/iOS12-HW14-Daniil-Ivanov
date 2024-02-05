@@ -56,15 +56,47 @@
 		00BE616A2B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov */ = {
 			isa = PBXGroup;
 			children = (
+				00BE617F2B70DCE3005E2C42 /* Sources */,
+				00BE61812B70DCF4005E2C42 /* Resources */,
+			);
+			path = "iOS12-HW14-Daniil-Ivanov";
+			sourceTree = "<group>";
+		};
+		00BE617F2B70DCE3005E2C42 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61802B70DCEB005E2C42 /* App */,
+				00BE616F2B70DBC2005E2C42 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		00BE61802B70DCEB005E2C42 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */,
 				00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */,
-				00BE616F2B70DBC2005E2C42 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		00BE61812B70DCF4005E2C42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				00BE61712B70DBC2005E2C42 /* Main.storyboard */,
 				00BE61742B70DBC4005E2C42 /* Assets.xcassets */,
 				00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */,
+				00BE61822B70DCFE005E2C42 /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00BE61822B70DCFE005E2C42 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
 				00BE61792B70DBC4005E2C42 /* Info.plist */,
 			);
-			path = "iOS12-HW14-Daniil-Ivanov";
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +326,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LLM6YPG7Q7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +354,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LLM6YPG7Q7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
