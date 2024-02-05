@@ -9,19 +9,32 @@
 /* Begin PBXBuildFile section */
 		00BE616C2B70DBC2005E2C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */; };
 		00BE616E2B70DBC2005E2C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */; };
-		00BE61702B70DBC2005E2C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616F2B70DBC2005E2C42 /* ViewController.swift */; };
+		00BE61702B70DBC2005E2C42 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */; };
 		00BE61752B70DBC4005E2C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE61742B70DBC4005E2C42 /* Assets.xcassets */; };
 		00BE61782B70DBC4005E2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */; };
+		00BE61892B70DF27005E2C42 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61882B70DF27005E2C42 /* AlbumsView.swift */; };
+		00BE618B2B70E392005E2C42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618A2B70E392005E2C42 /* Album.swift */; };
+		00BE618E2B70E683005E2C42 /* AlbumsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */; };
+		00BE61902B70EEC4005E2C42 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */; };
+		00BE61932B70F050005E2C42 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 00BE61922B70F050005E2C42 /* SnapKit */; };
+		00BE61962B7103E8005E2C42 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61952B7103E8005E2C42 /* TabBarController.swift */; };
+		00BE61982B71057F005E2C42 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61972B71057F005E2C42 /* EmptyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00BE61682B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW14-Daniil-Ivanov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00BE616F2B70DBC2005E2C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		00BE61742B70DBC4005E2C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BE61772B70DBC4005E2C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE61792B70DBC4005E2C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00BE61882B70DF27005E2C42 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		00BE618A2B70E392005E2C42 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsFactory.swift; sourceTree = "<group>"; };
+		00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		00BE61952B7103E8005E2C42 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		00BE61972B71057F005E2C42 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BE61932B70F050005E2C42 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +77,9 @@
 		00BE617F2B70DCE3005E2C42 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				00BE61942B7103CE005E2C42 /* TabBar */,
+				00BE61842B70DE76005E2C42 /* Photos */,
 				00BE61802B70DCEB005E2C42 /* App */,
-				00BE616F2B70DBC2005E2C42 /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -96,6 +111,67 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		00BE61832B70DE64005E2C42 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618C2B70E66B005E2C42 /* Helpers */,
+				00BE61872B70DEFD005E2C42 /* Model */,
+				00BE61862B70DEF4005E2C42 /* Controller */,
+				00BE61852B70DEEE005E2C42 /* View */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		00BE61842B70DE76005E2C42 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61832B70DE64005E2C42 /* Albums */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		00BE61852B70DEEE005E2C42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61882B70DF27005E2C42 /* AlbumsView.swift */,
+				00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00BE61862B70DEF4005E2C42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		00BE61872B70DEFD005E2C42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618A2B70E392005E2C42 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00BE618C2B70E66B005E2C42 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		00BE61942B7103CE005E2C42 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61952B7103E8005E2C42 /* TabBarController.swift */,
+				00BE61972B71057F005E2C42 /* EmptyViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,6 +188,9 @@
 			dependencies = (
 			);
 			name = "iOS12-HW14-Daniil-Ivanov";
+			packageProductDependencies = (
+				00BE61922B70F050005E2C42 /* SnapKit */,
+			);
 			productName = "iOS12-HW14-Daniil-Ivanov";
 			productReference = 00BE61682B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +219,9 @@
 				Base,
 			);
 			mainGroup = 00BE615F2B70DBC2005E2C42;
+			packageReferences = (
+				00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 00BE61692B70DBC2005E2C42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,9 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BE61702B70DBC2005E2C42 /* ViewController.swift in Sources */,
+				00BE61702B70DBC2005E2C42 /* AlbumsViewController.swift in Sources */,
 				00BE616C2B70DBC2005E2C42 /* AppDelegate.swift in Sources */,
+				00BE618E2B70E683005E2C42 /* AlbumsFactory.swift in Sources */,
+				00BE61892B70DF27005E2C42 /* AlbumsView.swift in Sources */,
 				00BE616E2B70DBC2005E2C42 /* SceneDelegate.swift in Sources */,
+				00BE618B2B70E392005E2C42 /* Album.swift in Sources */,
+				00BE61982B71057F005E2C42 /* EmptyViewController.swift in Sources */,
+				00BE61962B7103E8005E2C42 /* TabBarController.swift in Sources */,
+				00BE61902B70EEC4005E2C42 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -295,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -319,7 +407,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,7 +439,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00BE61922B70F050005E2C42 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00BE61602B70DBC2005E2C42 /* Project object */;
 }
