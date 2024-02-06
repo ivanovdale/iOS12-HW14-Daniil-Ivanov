@@ -28,7 +28,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             guard let data else { return }
             imageView.image = UIImage(named: data.mainPhotoName)
             titleLabel.text = data.title
-            countLabel.text = String(data.photoCount)
+            countLabel.text = String(data.photoCount ?? 0)
             favoriteImageView.isHidden = !data.isFavorite
         }
     }

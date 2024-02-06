@@ -16,6 +16,8 @@ class AlbumsView: UIView {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
+        collectionView.register(PeopleCollectionViewCell.self, forCellWithReuseIdentifier: PeopleCollectionViewCell.identifier)
+        collectionView.register(PlacesCollectionViewCell.self, forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
         collectionView.register(AlbumsSectionHeader.self, forSupplementaryViewOfKind: ElementKind.sectionHeader, withReuseIdentifier: AlbumsSectionHeader.identifier)
         return collectionView
     }()
@@ -55,8 +57,18 @@ class AlbumsView: UIView {
 
     private func createLayout() -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, _ in
-            return createMyAlbumsLayoutSection()
+            switch sectionIndex {
+            case 0:
+                return createMyAlbumsLayoutSection()
+            case 1:
+                return createPeopleAndPlacesLayoutSection()
+            default:
+                return createMyAlbumsLayoutSection()
+            }
+
         }
+
+        // MARK: Section layout
 
         func createMyAlbumsLayoutSection() -> NSCollectionLayoutSection {
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
@@ -76,6 +88,31 @@ class AlbumsView: UIView {
             return layoutSection
         }
 
+        func createPeopleAndPlacesLayoutSection() -> NSCollectionLayoutSection {
+            let peopleItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+            let peopleLayoutItem = NSCollectionLayoutItem(layoutSize: peopleItemSize)
+            peopleLayoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2)
+
+            let placesItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.4), heightDimension: .fractionalWidth(1 / 2))
+            let placesLayoutItem = NSCollectionLayoutItem(layoutSize: placesItemSize)
+
+            let peopleAndPlacesGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1 / 2.05))
+            let peopleAndPlacesLayoutGroup = NSCollectionLayoutGroup.horizontal(
+                layoutSize: peopleAndPlacesGroupSize,
+                subitems: [peopleLayoutItem, placesLayoutItem]
+            )
+
+            let layoutSectionHeader = createLayoutSectionHeader()
+            let layoutSection = NSCollectionLayoutSection(group: peopleAndPlacesLayoutGroup)
+            layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 0)
+            layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+            layoutSection.orthogonalScrollingBehavior = .continuous
+
+            return layoutSection
+        }
+
+        // MARK: Section header
+
         func createLayoutSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
             let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.97), heightDimension: .estimated(45))
             let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
@@ -88,3 +125,7 @@ class AlbumsView: UIView {
     }
 }
 
+
+#Preview {
+    AlbumsViewController()
+}

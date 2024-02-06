@@ -8,12 +8,12 @@
 import Foundation
 
 struct Album {
-    let title: String
+    let title: String?
     let mainPhotoName: String
-    let photoCount: Int
+    let photoCount: Int?
     let isFavorite: Bool
 
-    init(title: String, mainPhotoName: String, photoCount: Int, isFavorite: Bool = false) {
+    init(title: String? = nil, mainPhotoName: String, photoCount: Int? = nil, isFavorite: Bool = false) {
         self.title = title
         self.mainPhotoName = mainPhotoName
         self.photoCount = photoCount

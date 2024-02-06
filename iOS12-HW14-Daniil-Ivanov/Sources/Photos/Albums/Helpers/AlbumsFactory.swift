@@ -30,6 +30,11 @@ fileprivate enum Constants {
     static let ducksPhotoName = "photo6"
     static let facesPhotoName = "photo7"
     static let humansPhotoName = "photo8"
+
+    static let human1PhotoName = "photo9"
+    static let human2PhotoName = "photo10"
+    static let human3PhotoName = "photo11"
+    static let human4PhotoName = "photo12"
 }
 
 struct AlbumsFactory {
@@ -37,49 +42,57 @@ struct AlbumsFactory {
         Int.random(in: 10...500)
     }
 
-    static func createAlbums() -> [Album] {
+    static func createAlbums() -> [[Album]] {
         [
-            Album(
-                title: Constants.recentsTitle,
-                mainPhotoName: Constants.recentsMainPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.favoritesTitle,
-                mainPhotoName: Constants.favoritesPhotoName,
-                photoCount: generateRandomCount(),
-                isFavorite: true
-            ),
-            Album(
-                title: Constants.familyReunionTitle,
-                mainPhotoName: Constants.familyReunionPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.memesTitle,
-                mainPhotoName: Constants.memesPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.universityTitle,
-                mainPhotoName: Constants.universityPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.ducksTitle,
-                mainPhotoName: Constants.ducksPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.facesTitle,
-                mainPhotoName: Constants.facesPhotoName,
-                photoCount: generateRandomCount()
-            ),
-            Album(
-                title: Constants.humansTitle,
-                mainPhotoName: Constants.humansPhotoName,
-                photoCount: generateRandomCount()
-            ),
+            [
+                Album(
+                    title: Constants.recentsTitle,
+                    mainPhotoName: Constants.recentsMainPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.favoritesTitle,
+                    mainPhotoName: Constants.favoritesPhotoName,
+                    photoCount: generateRandomCount(),
+                    isFavorite: true
+                ),
+                Album(
+                    title: Constants.familyReunionTitle,
+                    mainPhotoName: Constants.familyReunionPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.memesTitle,
+                    mainPhotoName: Constants.memesPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.universityTitle,
+                    mainPhotoName: Constants.universityPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.ducksTitle,
+                    mainPhotoName: Constants.ducksPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.facesTitle,
+                    mainPhotoName: Constants.facesPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.humansTitle,
+                    mainPhotoName: Constants.humansPhotoName,
+                    photoCount: generateRandomCount()
+                ),
+            ],
+            [
+                Album(mainPhotoName: Constants.human1PhotoName),
+                Album(mainPhotoName: Constants.human2PhotoName),
+                Album(mainPhotoName: Constants.human3PhotoName),
+                Album(mainPhotoName: Constants.human4PhotoName),
+            ]
         ]
     }
 }
