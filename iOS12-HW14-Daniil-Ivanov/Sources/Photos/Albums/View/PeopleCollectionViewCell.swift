@@ -11,6 +11,8 @@ import SnapKit
 final class PeopleCollectionViewCell: UICollectionViewCell {
     private enum Constants {
         static let imageHorizontalSpacing = 2.0
+        static let title = "People"
+        static let titleSubtitleOffset = 5.0
     }
 
     static let identifier = "PeopleCollectionViewCell"
@@ -23,6 +25,7 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
             data.enumerated().forEach { (index, value) in
                 imageViews[index].image = UIImage(named: value.mainPhotoName)
             }
+            titleSubtitleView.subTitle = String(data.count)
         }
     }
 
@@ -33,7 +36,6 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
         for _ in 0..<imageCount {
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFill
-            imageView.layer.cornerRadius = self.frame.height / Double(2 * imagesNumberInRow)
             imageView.clipsToBounds = true
             views.append(imageView)
         }
@@ -58,6 +60,12 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         return stackView
+    }()
+
+    private lazy var titleSubtitleView: TitleSubtitleView =  {
+        let view = TitleSubtitleView()
+        view.title = Constants.title
+        return view
     }()
 
     // MARK: - Init
@@ -85,14 +93,31 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
             // Добавление внутренних стеков в главный стек.
             mainStack.addArrangedSubview($0)
         }
-        addSubview(mainStack)
+        [mainStack, titleSubtitleView].forEach { addSubview($0) }
     }
 
     private func setupLayout() {
         mainStack.snp.makeConstraints { make in
-            make.top.equalTo(self)
-            make.height.equalTo(self.snp.height)
+            make.leading.top.trailing.equalTo(self)
+            make.bottom.equalTo(titleSubtitleView.snp.top).offset(-Constants.titleSubtitleOffset)
             make.width.equalTo(mainStack.snp.height)
+        }
+        titleSubtitleView.snp.makeConstraints { make in
+            make.leading.trailing.equalTo(self)
+        }
+
+    }
+
+    // MARK: - Lifecycle
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureImageViewCornerRadius()
+    }
+
+    private func configureImageViewCornerRadius() {
+        imageViews.forEach {
+            $0.layer.cornerRadius = mainStack.frame.height / Double(2 * imagesNumberInRow)
         }
     }
 }

@@ -17,7 +17,7 @@ fileprivate enum Constants {
     static let favoriteImageName = "heart.fill"
     static let favoriteImageViewOffset = 5.0
     static let favoriteImageColor = UIColor.white
-    static let infoStackOffset = 4.0
+    static let titleSubtitleOffset = 5.0
 }
 
 class AlbumCollectionViewCell: UICollectionViewCell {
@@ -27,8 +27,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let data else { return }
             imageView.image = UIImage(named: data.mainPhotoName)
-            titleLabel.text = data.title
-            countLabel.text = String(data.photoCount ?? 0)
+            titleSubtitleView.title = data.title
+            titleSubtitleView.subTitle = String(data.photoCount ?? 0)
             favoriteImageView.isHidden = !data.isFavorite
         }
     }
@@ -43,24 +43,9 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = Constants.titleFont
-        return label
-    }()
-
-    private lazy var countLabel: UILabel = {
-        let label = UILabel()
-        label.font = Constants.countFont
-        label.textColor = Constants.countTextColor
-        return label
-    }()
-
-    private lazy var infoStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [titleLabel, countLabel])
-        stack.axis = .vertical
-        stack.spacing = 1
-        return stack
+    private lazy var titleSubtitleView: TitleSubtitleView =  {
+        let view = TitleSubtitleView()
+        return view
     }()
 
     private lazy var favoriteImageView: UIImageView = {
@@ -85,7 +70,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        [imageView, infoStack, favoriteImageView].forEach { addSubview($0) }
+        [imageView, titleSubtitleView, favoriteImageView].forEach { addSubview($0) }
     }
 
     private func setupLayout() {
@@ -94,8 +79,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             make.height.equalTo(self).multipliedBy(Constants.imageSizeMultiplier)
             make.width.equalTo(imageView.snp.height)
         }
-        infoStack.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(Constants.infoStackOffset)
+        titleSubtitleView.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom).offset(Constants.titleSubtitleOffset)
             make.leading.bottom.equalTo(self)
         }
         favoriteImageView.snp.makeConstraints { make in
