@@ -223,7 +223,7 @@ final class AlbumsView: UIView {
         func createLayoutSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
             let layoutSectionHeaderSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1 / 1.03),
-                heightDimension: .fractionalHeight(1 / 20)
+                heightDimension: .estimated(44)
             )
             let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                 layoutSize: layoutSectionHeaderSize,
