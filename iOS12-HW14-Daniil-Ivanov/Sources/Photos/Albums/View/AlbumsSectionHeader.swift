@@ -59,7 +59,6 @@ final class AlbumsSectionHeader: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        clipsToBounds = true
         setupHierarchy()
         setupLayout()
     }
@@ -71,7 +70,7 @@ final class AlbumsSectionHeader: UICollectionReusableView {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        [separatorView, titleLabel, seeAllButton].forEach { addSubview($0)}
+        [separatorView, titleLabel, seeAllButton].forEach { addSubview($0) }
     }
 
     private func setupLayout() {
@@ -79,10 +78,12 @@ final class AlbumsSectionHeader: UICollectionReusableView {
             make.leading.top.trailing.equalTo(self)
             make.height.equalTo(Constants.separatorHeight)
         }
+
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(separatorView.snp.bottom).offset(Constants.titleOffset)
             make.leading.equalTo(self)
         }
+
         seeAllButton.snp.makeConstraints { make in
             make.centerY.equalTo(titleLabel)
             make.trailing.equalTo(self).offset(-Constants.buttonOffset)

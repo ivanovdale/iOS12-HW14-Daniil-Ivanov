@@ -74,6 +74,8 @@ final class MediaTypesAndUtilitiesCollectionViewListCell: UICollectionViewListCe
         accessories.insert(additionalAccessory, at: 0)
     }
 
+    // MARK: - Reuse
+
     override func prepareForReuse() {
         super.prepareForReuse()
         setupDisclosureIndicator()

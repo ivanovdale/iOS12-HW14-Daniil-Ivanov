@@ -100,7 +100,6 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
             make.leading.trailing.bottom.equalTo(self)
             make.top.equalTo(mainStack.snp.bottom).offset(Constants.titleSubtitleOffset)
         }
-
     }
 
     // MARK: - Lifecycle
