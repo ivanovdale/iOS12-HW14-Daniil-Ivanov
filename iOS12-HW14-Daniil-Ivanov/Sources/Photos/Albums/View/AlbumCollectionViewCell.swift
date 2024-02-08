@@ -25,7 +25,7 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
     var data: Album? {
         didSet {
             guard let data else { return }
-            imageView.image = UIImage(named: data.mainPhotoName)
+            imageView.image = UIImage(named: data.imageName)
             titleSubtitleView.title = data.title
             titleSubtitleView.subTitle = String(data.photoCount ?? 0)
             favoriteImageView.isHidden = !data.isFavorite

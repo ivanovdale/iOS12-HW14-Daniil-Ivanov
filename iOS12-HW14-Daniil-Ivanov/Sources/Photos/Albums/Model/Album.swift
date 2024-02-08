@@ -9,14 +9,22 @@ import Foundation
 
 struct Album {
     let title: String?
-    let mainPhotoName: String
+    let imageName: String
     let photoCount: Int?
     let isFavorite: Bool
+    let isLocked: Bool?
 
-    init(title: String? = nil, mainPhotoName: String, photoCount: Int? = nil, isFavorite: Bool = false) {
+    init(
+        title: String? = nil,
+        imageName: String,
+        photoCount: Int? = nil,
+        isFavorite: Bool = false,
+        isLocked: Bool? = nil
+    ) {
         self.title = title
-        self.mainPhotoName = mainPhotoName
+        self.imageName = imageName
         self.photoCount = photoCount
         self.isFavorite = isFavorite
+        self.isLocked = isLocked
     }
 }

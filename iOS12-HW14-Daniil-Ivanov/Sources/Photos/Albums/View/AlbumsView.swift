@@ -28,6 +28,10 @@ final class AlbumsView: UIView {
             forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier
         )
         collectionView.register(
+            MediaTypesAndUtilitiesCollectionViewListCell.self,
+            forCellWithReuseIdentifier: MediaTypesAndUtilitiesCollectionViewListCell.identifier
+        )
+        collectionView.register(
             AlbumsSectionHeader.self,
             forSupplementaryViewOfKind: ElementKind.sectionHeader,
             withReuseIdentifier: AlbumsSectionHeader.identifier
@@ -70,12 +74,17 @@ final class AlbumsView: UIView {
     // MARK: Layout configuration
 
     private func createLayout() -> UICollectionViewLayout {
-        return UICollectionViewCompositionalLayout { sectionIndex, _ in
+        return UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
             switch sectionIndex {
-            case 0:
+            case AlbumsViewControllerConstants.myAlbumsSectionNumber:
                 return createMyAlbumsLayoutSection()
-            case 1:
+            case AlbumsViewControllerConstants.peopleAndPlacesSectionNumber:
                 return createPeopleAndPlacesLayoutSection()
+            case AlbumsViewControllerConstants.mediaTypesSectionNumber, AlbumsViewControllerConstants.utilitiesSectionNumber:
+                return createMediaTypesAndUtilitiesLayoutSection(
+                    sectionIndex: sectionIndex,
+                    layoutEnvironment: layoutEnvironment
+                )
             default:
                 return createMyAlbumsLayoutSection()
             }
@@ -152,7 +161,55 @@ final class AlbumsView: UIView {
             layoutSection.contentInsets = NSDirectionalEdgeInsets(
                 top: 0,
                 leading: 15,
-                bottom: 20,
+                bottom: 50,
+                trailing: 0
+            )
+
+            layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+
+            return layoutSection
+        }
+
+        func createMediaTypesAndUtilitiesLayoutSection(
+            sectionIndex: Int,
+            layoutEnvironment: NSCollectionLayoutEnvironment
+        ) -> NSCollectionLayoutSection {
+
+            // Hide last item separators.
+
+            // TODO: Хардкод... не знаю, как можно нормально обыграть этот момент с последними элементами секции.
+            let indexPathToHideMidiaTypes = IndexPath(item: 10, section: AlbumsViewControllerConstants.mediaTypesSectionNumber)
+            let indexPathToHideUtilities = IndexPath(item: 2, section: AlbumsViewControllerConstants.utilitiesSectionNumber)
+
+            var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+            configuration.itemSeparatorHandler = { (indexPath, sectionSeparatorConfiguration) in
+                var configuration = sectionSeparatorConfiguration
+                if indexPath == indexPathToHideMidiaTypes || indexPath == indexPathToHideUtilities {
+                    configuration.bottomSeparatorVisibility = .hidden
+                }
+                return configuration
+            }
+
+
+            let layoutSection = NSCollectionLayoutSection.list(
+                using: configuration,
+                layoutEnvironment: layoutEnvironment
+            )
+
+            layoutSection.contentInsets = NSDirectionalEdgeInsets(
+                top: 0,
+                leading: 0,
+                bottom: 10,
+                trailing: 0
+            )
+
+            // Set header.
+
+            let layoutSectionHeader = createLayoutSectionHeader()
+            layoutSectionHeader.contentInsets = NSDirectionalEdgeInsets(
+                top: 0,
+                leading: 15,
+                bottom: 0,
                 trailing: 0
             )
 
@@ -166,7 +223,7 @@ final class AlbumsView: UIView {
         func createLayoutSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
             let layoutSectionHeaderSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1 / 1.03),
-                heightDimension: .fractionalHeight(1 / 14)
+                heightDimension: .fractionalHeight(1 / 20)
             )
             let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                 layoutSize: layoutSectionHeaderSize,

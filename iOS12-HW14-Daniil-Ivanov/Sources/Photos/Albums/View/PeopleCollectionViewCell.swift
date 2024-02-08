@@ -23,7 +23,7 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let data, data.count == imageCount else { return }
             data.enumerated().forEach { (index, value) in
-                imageViews[index].image = UIImage(named: value.mainPhotoName)
+                imageViews[index].image = UIImage(named: value.imageName)
             }
             titleSubtitleView.subTitle = String(data.count)
         }

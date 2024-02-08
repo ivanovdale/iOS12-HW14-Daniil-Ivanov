@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Constants
+
 fileprivate enum Constants {
 
     // MARK: - Titles
@@ -19,6 +21,22 @@ fileprivate enum Constants {
     static let ducksTitle = "Ducks"
     static let facesTitle = "Faces"
     static let humansTitle = "Humans"
+
+    static let videosTitle = "Videos"
+    static let selfiesTitle = "Selfies"
+    static let livePhotosTitle = "Live Photos"
+    static let portraitTitle = "Portrait"
+    static let timelapseTitle = "Time-lapse"
+    static let slomoTitle = "Slo-mo"
+    static let cinematicTitle = "Cinematic"
+    static let burstsTitle = "Bursts"
+    static let screenshotsTitle = "Screenshots"
+    static let screenRecordingsTitle = "Screen Recordings"
+    static let animatedTitle = "Animated"
+
+    static let importsTitle = "Imports"
+    static let hiddenTitle = "Hidden"
+    static let recentlyDeletedTitle = "Recently Deleted"
 
     // MARK: - Photo names
 
@@ -35,6 +53,24 @@ fileprivate enum Constants {
     static let human2PhotoName = "photo10"
     static let human3PhotoName = "photo11"
     static let human4PhotoName = "photo12"
+
+    // MARK: - Image system names
+
+    static let videosImageName = "video"
+    static let selfiesImageName = "person.crop.square"
+    static let livePhotosImageName = "livephoto"
+    static let portraitImageName = "f.cursive.circle"
+    static let timelapseImageName = "timelapse"
+    static let slomoImageName = "slowmo"
+    static let cinematicImageName = "video.bubble"
+    static let burstsImageName = "square.stack.3d.down.right"
+    static let screenshotsImageName = "camera.viewfinder"
+    static let screenRecordingsImageName = "record.circle"
+    static let animatedImageName = "square.stack.3d.forward.dottedline"
+
+    static let importsImageName = "square.and.arrow.down"
+    static let hiddenImageName = "eye.slash"
+    static let recentlyDeletedImageName = "trash"
 }
 
 struct AlbumsFactory {
@@ -47,52 +83,128 @@ struct AlbumsFactory {
             [
                 Album(
                     title: Constants.recentsTitle,
-                    mainPhotoName: Constants.recentsMainPhotoName,
+                    imageName: Constants.recentsMainPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.favoritesTitle,
-                    mainPhotoName: Constants.favoritesPhotoName,
+                    imageName: Constants.favoritesPhotoName,
                     photoCount: generateRandomCount(),
                     isFavorite: true
                 ),
                 Album(
                     title: Constants.familyReunionTitle,
-                    mainPhotoName: Constants.familyReunionPhotoName,
+                    imageName: Constants.familyReunionPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.memesTitle,
-                    mainPhotoName: Constants.memesPhotoName,
+                    imageName: Constants.memesPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.universityTitle,
-                    mainPhotoName: Constants.universityPhotoName,
+                    imageName: Constants.universityPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.ducksTitle,
-                    mainPhotoName: Constants.ducksPhotoName,
+                    imageName: Constants.ducksPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.facesTitle,
-                    mainPhotoName: Constants.facesPhotoName,
+                    imageName: Constants.facesPhotoName,
                     photoCount: generateRandomCount()
                 ),
                 Album(
                     title: Constants.humansTitle,
-                    mainPhotoName: Constants.humansPhotoName,
+                    imageName: Constants.humansPhotoName,
                     photoCount: generateRandomCount()
                 ),
             ],
             [
-                Album(mainPhotoName: Constants.human1PhotoName),
-                Album(mainPhotoName: Constants.human2PhotoName),
-                Album(mainPhotoName: Constants.human3PhotoName),
-                Album(mainPhotoName: Constants.human4PhotoName),
-            ]
+                Album(imageName: Constants.human1PhotoName),
+                Album(imageName: Constants.human2PhotoName),
+                Album(imageName: Constants.human3PhotoName),
+                Album(imageName: Constants.human4PhotoName),
+            ],
+            [
+                Album(
+                    title: Constants.videosTitle,
+                    imageName: Constants.videosImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.selfiesTitle,
+                    imageName: Constants.selfiesImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.livePhotosTitle,
+                    imageName: Constants.livePhotosImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.portraitTitle,
+                    imageName: Constants.portraitImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.timelapseTitle,
+                    imageName: Constants.timelapseImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.slomoTitle,
+                    imageName: Constants.slomoImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.cinematicTitle,
+                    imageName: Constants.cinematicImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.burstsTitle,
+                    imageName: Constants.burstsImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.screenshotsTitle,
+                    imageName: Constants.screenshotsImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.screenRecordingsTitle,
+                    imageName: Constants.screenRecordingsImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.animatedTitle,
+                    imageName: Constants.animatedImageName,
+                    photoCount: generateRandomCount()
+                ),
+            ],
+            [
+                Album(
+                    title: Constants.importsTitle,
+                    imageName: Constants.importsImageName,
+                    photoCount: generateRandomCount()
+                ),
+                Album(
+                    title: Constants.hiddenTitle,
+                    imageName: Constants.hiddenImageName,
+                    photoCount: generateRandomCount(),
+                    isLocked: true
+                ),
+                Album(
+                    title: Constants.recentlyDeletedTitle,
+                    imageName: Constants.recentlyDeletedImageName,
+                    photoCount: generateRandomCount(),
+                    isLocked: true
+                ),
+            ],
         ]
     }
 }
