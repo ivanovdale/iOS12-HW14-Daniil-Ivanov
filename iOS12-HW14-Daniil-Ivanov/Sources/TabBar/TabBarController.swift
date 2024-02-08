@@ -7,25 +7,6 @@
 
 import UIKit
 
-// MARK: - Constants
-
-fileprivate enum Constants {
-    static let libraryTitle = "Library"
-    static let forYouTitle = "For you"
-    static let albumsTitle = "Albums"
-    static let searchTitle = "Search"
-
-    static let libraryImageName = "photo.on.rectangle"
-    static let forYouImageName = "heart.text.square"
-    static let albumsImageName = "rectangle.stack"
-    static let searchImageName = "magnifyingglass"
-
-    static let librarySelectedImageName = "photo.on.rectangle.fill"
-    static let forYouSelectedImageName = "heart.text.square.fill"
-    static let albumsSelectedImageName = "rectangle.stack.fill"
-    static let searchSelectedImageName = "magnifyingglass.fill"
-}
-
 final class TabBarController: UITabBarController {
 
     // MARK: - Lifecycle
@@ -79,7 +60,8 @@ final class TabBarController: UITabBarController {
             libraryViewController,
             forYouViewController,
             albumsViewController,
-            searchViewController,]
+            searchViewController,
+        ]
         viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
     }
 
@@ -90,4 +72,23 @@ final class TabBarController: UITabBarController {
         }
     }
 
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let libraryTitle = "Library"
+    static let forYouTitle = "For you"
+    static let albumsTitle = "Albums"
+    static let searchTitle = "Search"
+
+    static let libraryImageName = "photo.on.rectangle"
+    static let forYouImageName = "heart.text.square"
+    static let albumsImageName = "rectangle.stack"
+    static let searchImageName = "magnifyingglass"
+
+    static let librarySelectedImageName = "photo.on.rectangle.fill"
+    static let forYouSelectedImageName = "heart.text.square.fill"
+    static let albumsSelectedImageName = "rectangle.stack.fill"
+    static let searchSelectedImageName = "magnifyingglass.fill"
 }

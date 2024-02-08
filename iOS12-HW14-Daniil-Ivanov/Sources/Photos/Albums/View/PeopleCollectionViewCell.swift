@@ -9,12 +9,6 @@ import UIKit
 import SnapKit
 
 final class PeopleCollectionViewCell: UICollectionViewCell {
-    private enum Constants {
-        static let imageHorizontalSpacing = 2.0
-        static let title = "People"
-        static let titleSubtitleOffset = 5.0
-    }
-
     static let identifier = "PeopleCollectionViewCell"
     private let imageCount = 4
     private let imagesNumberInRow = 2
@@ -121,4 +115,12 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
             $0.layer.cornerRadius = mainStack.frame.height / Double(2 * imagesNumberInRow)
         }
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let imageHorizontalSpacing = 2.0
+    static let title = "People"
+    static let titleSubtitleOffset = 5.0
 }

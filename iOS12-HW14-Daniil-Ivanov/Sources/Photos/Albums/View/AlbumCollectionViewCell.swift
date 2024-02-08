@@ -8,17 +8,6 @@
 import UIKit
 import SnapKit
 
-fileprivate enum Constants {
-    static let titleFont = UIFont.systemFont(ofSize: 14)
-    static let countFont = UIFont.systemFont(ofSize: 15)
-    static let countTextColor = UIColor.lightGray
-    static let imageCornerRadius = 4.0
-    static let favoriteImageName = "heart.fill"
-    static let favoriteImageViewOffset = 5.0
-    static let favoriteImageColor = UIColor.white
-    static let titleSubtitleOffset = 5.0
-}
-
 final class AlbumCollectionViewCell: UICollectionViewCell {
     static let identifier = "AlbumCollectionViewCell"
 
@@ -95,4 +84,17 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         favoriteImageView.isHidden = true
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let titleFont = UIFont.systemFont(ofSize: 14)
+    static let countFont = UIFont.systemFont(ofSize: 15)
+    static let countTextColor = UIColor.lightGray
+    static let imageCornerRadius = 4.0
+    static let favoriteImageName = "heart.fill"
+    static let favoriteImageViewOffset = 5.0
+    static let favoriteImageColor = UIColor.white
+    static let titleSubtitleOffset = 5.0
 }

@@ -33,7 +33,7 @@ final class AlbumsView: UIView {
         )
         collectionView.register(
             AlbumsSectionHeader.self,
-            forSupplementaryViewOfKind: ElementKind.sectionHeader,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: AlbumsSectionHeader.identifier
         )
 
@@ -227,7 +227,7 @@ final class AlbumsView: UIView {
             )
             let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                 layoutSize: layoutSectionHeaderSize,
-                elementKind: ElementKind.sectionHeader,
+                elementKind: UICollectionView.elementKindSectionHeader,
                 alignment: .top
             )
 

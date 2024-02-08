@@ -7,72 +7,6 @@
 
 import Foundation
 
-// MARK: - Constants
-
-fileprivate enum Constants {
-
-    // MARK: - Titles
-
-    static let recentsTitle = "Recents"
-    static let familyReunionTitle = "Family Reunion"
-    static let favoritesTitle = "Favorites"
-    static let memesTitle = "Memes"
-    static let universityTitle = "University"
-    static let ducksTitle = "Ducks"
-    static let facesTitle = "Faces"
-    static let humansTitle = "Humans"
-
-    static let videosTitle = "Videos"
-    static let selfiesTitle = "Selfies"
-    static let livePhotosTitle = "Live Photos"
-    static let portraitTitle = "Portrait"
-    static let timelapseTitle = "Time-lapse"
-    static let slomoTitle = "Slo-mo"
-    static let cinematicTitle = "Cinematic"
-    static let burstsTitle = "Bursts"
-    static let screenshotsTitle = "Screenshots"
-    static let screenRecordingsTitle = "Screen Recordings"
-    static let animatedTitle = "Animated"
-
-    static let importsTitle = "Imports"
-    static let hiddenTitle = "Hidden"
-    static let recentlyDeletedTitle = "Recently Deleted"
-
-    // MARK: - Photo names
-
-    static let recentsMainPhotoName = "photo1"
-    static let familyReunionPhotoName = "photo2"
-    static let favoritesPhotoName = "photo3"
-    static let memesPhotoName = "photo4"
-    static let universityPhotoName = "photo5"
-    static let ducksPhotoName = "photo6"
-    static let facesPhotoName = "photo7"
-    static let humansPhotoName = "photo8"
-
-    static let human1PhotoName = "photo9"
-    static let human2PhotoName = "photo10"
-    static let human3PhotoName = "photo11"
-    static let human4PhotoName = "photo12"
-
-    // MARK: - Image system names
-
-    static let videosImageName = "video"
-    static let selfiesImageName = "person.crop.square"
-    static let livePhotosImageName = "livephoto"
-    static let portraitImageName = "f.cursive.circle"
-    static let timelapseImageName = "timelapse"
-    static let slomoImageName = "slowmo"
-    static let cinematicImageName = "video.bubble"
-    static let burstsImageName = "square.stack.3d.down.right"
-    static let screenshotsImageName = "camera.viewfinder"
-    static let screenRecordingsImageName = "record.circle"
-    static let animatedImageName = "square.stack.3d.forward.dottedline"
-
-    static let importsImageName = "square.and.arrow.down"
-    static let hiddenImageName = "eye.slash"
-    static let recentlyDeletedImageName = "trash"
-}
-
 struct AlbumsFactory {
     static private func generateRandomCount() -> Int {
         Int.random(in: 10...500)
@@ -207,4 +141,70 @@ struct AlbumsFactory {
             ],
         ]
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+
+    // MARK: - Titles
+
+    static let recentsTitle = "Recents"
+    static let familyReunionTitle = "Family Reunion"
+    static let favoritesTitle = "Favorites"
+    static let memesTitle = "Memes"
+    static let universityTitle = "University"
+    static let ducksTitle = "Ducks"
+    static let facesTitle = "Faces"
+    static let humansTitle = "Humans"
+
+    static let videosTitle = "Videos"
+    static let selfiesTitle = "Selfies"
+    static let livePhotosTitle = "Live Photos"
+    static let portraitTitle = "Portrait"
+    static let timelapseTitle = "Time-lapse"
+    static let slomoTitle = "Slo-mo"
+    static let cinematicTitle = "Cinematic"
+    static let burstsTitle = "Bursts"
+    static let screenshotsTitle = "Screenshots"
+    static let screenRecordingsTitle = "Screen Recordings"
+    static let animatedTitle = "Animated"
+
+    static let importsTitle = "Imports"
+    static let hiddenTitle = "Hidden"
+    static let recentlyDeletedTitle = "Recently Deleted"
+
+    // MARK: - Photo names
+
+    static let recentsMainPhotoName = "photo1"
+    static let familyReunionPhotoName = "photo2"
+    static let favoritesPhotoName = "photo3"
+    static let memesPhotoName = "photo4"
+    static let universityPhotoName = "photo5"
+    static let ducksPhotoName = "photo6"
+    static let facesPhotoName = "photo7"
+    static let humansPhotoName = "photo8"
+
+    static let human1PhotoName = "photo9"
+    static let human2PhotoName = "photo10"
+    static let human3PhotoName = "photo11"
+    static let human4PhotoName = "photo12"
+
+    // MARK: - Image system names
+
+    static let videosImageName = "video"
+    static let selfiesImageName = "person.crop.square"
+    static let livePhotosImageName = "livephoto"
+    static let portraitImageName = "f.cursive.circle"
+    static let timelapseImageName = "timelapse"
+    static let slomoImageName = "slowmo"
+    static let cinematicImageName = "video.bubble"
+    static let burstsImageName = "square.stack.3d.down.right"
+    static let screenshotsImageName = "camera.viewfinder"
+    static let screenRecordingsImageName = "record.circle"
+    static let animatedImageName = "square.stack.3d.forward.dottedline"
+
+    static let importsImageName = "square.and.arrow.down"
+    static let hiddenImageName = "eye.slash"
+    static let recentlyDeletedImageName = "trash"
 }

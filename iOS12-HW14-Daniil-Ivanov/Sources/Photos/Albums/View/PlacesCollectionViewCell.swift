@@ -8,18 +8,6 @@
 import UIKit
 import SnapKit
 
-// MARK: - Constants
-
-fileprivate enum Constants {
-    static let title = "Places"
-    static let mapCornerRadius = 6.0
-    static let titleSubtitleOffset = 5.0
-    static let mainImageHeightScale = 2.0
-    static let mainImageCornerRadius = 6.0
-    static let mainImageBorderColor = UIColor.white
-    static let mainImageBorderWidth = 3.0
-}
-
 final class PlacesCollectionViewCell: UICollectionViewCell {
     static let identifier = "PlacesCollectionViewCell"
 
@@ -113,4 +101,16 @@ final class PlacesCollectionViewCell: UICollectionViewCell {
             make.centerX.equalTo(mainImageView.snp.centerX)
         }
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let title = "Places"
+    static let mapCornerRadius = 6.0
+    static let titleSubtitleOffset = 5.0
+    static let mainImageHeightScale = 2.0
+    static let mainImageCornerRadius = 6.0
+    static let mainImageBorderColor = UIColor.white
+    static let mainImageBorderWidth = 3.0
 }

@@ -8,19 +8,6 @@
 import UIKit
 import SnapKit
 
-fileprivate enum Constants {
-    static let separatorColor = UIColor.lightGray
-    static let titleFont = UIFont.systemFont(ofSize: 20, weight: .bold)
-    static let seeAll = "See all"
-    static let titleOffset = 10.0
-    static let buttonOffset = 10.0
-    static let separatorHeight = 1.0
-}
-
-enum ElementKind {
-    static let sectionHeader = "section-header-element-kind"
-}
-
 final class AlbumsSectionHeader: UICollectionReusableView {
     static let identifier = "MyAlbumsSectionHeader"
 
@@ -97,4 +84,15 @@ final class AlbumsSectionHeader: UICollectionReusableView {
         titleLabel.text = nil
         seeAllButton.isHidden = true
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let separatorColor = UIColor.lightGray
+    static let titleFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+    static let seeAll = "See all"
+    static let titleOffset = 10.0
+    static let buttonOffset = 10.0
+    static let separatorHeight = 1.0
 }

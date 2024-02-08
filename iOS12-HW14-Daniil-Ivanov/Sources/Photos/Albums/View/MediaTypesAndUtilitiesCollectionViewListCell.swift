@@ -7,15 +7,6 @@
 
 import UIKit
 
-// MARK: - Constants
-
-fileprivate enum Constants {
-    static let imageTintColor = UIColor.systemBlue
-    static let disclosureIndicatorTintColor = UIColor.lightGray
-    static let lockImageName = "lock.fill"
-    static let lockImageColor = UIColor.lightGray
-}
-
 final class MediaTypesAndUtilitiesCollectionViewListCell: UICollectionViewListCell {
     static let identifier = "MediaTypesAndUtilitiesCollectionViewListCell"
 
@@ -87,4 +78,13 @@ final class MediaTypesAndUtilitiesCollectionViewListCell: UICollectionViewListCe
         super.prepareForReuse()
         setupDisclosureIndicator()
     }
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let imageTintColor = UIColor.systemBlue
+    static let disclosureIndicatorTintColor = UIColor.lightGray
+    static let lockImageName = "lock.fill"
+    static let lockImageColor = UIColor.lightGray
 }

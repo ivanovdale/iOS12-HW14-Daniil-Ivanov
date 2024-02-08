@@ -8,14 +8,6 @@
 import UIKit
 import SnapKit
 
-fileprivate enum Constants {
-    static let titleFont = UIFont.systemFont(ofSize: 14)
-    static let subtitleFont = UIFont.systemFont(ofSize: 15)
-    static let subtitleTextColor = UIColor.lightGray
-    static let subtitleOffset = 1.0
-}
-
-
 final class TitleSubtitleView: UIView {
 
     var title: String? {
@@ -74,4 +66,13 @@ final class TitleSubtitleView: UIView {
         }
     }
 
+}
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+    static let titleFont = UIFont.systemFont(ofSize: 14)
+    static let subtitleFont = UIFont.systemFont(ofSize: 15)
+    static let subtitleTextColor = UIColor.lightGray
+    static let subtitleOffset = 1.0
 }

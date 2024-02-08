@@ -7,24 +7,6 @@
 
 import UIKit
 
-// MARK: - Constants
-
-enum AlbumsViewControllerConstants {
-    static let myAlbumsSectionNumber = 0
-    static let peopleAndPlacesSectionNumber = 1
-    static let mediaTypesSectionNumber = 2
-    static let utilitiesSectionNumber = 3
-}
-
-fileprivate enum Constants {
-    static let myAlbumsSectionHeaderTitle = "My Albums"
-    static let peopleAndPlacesSectionHeaderTitle = "People & Places"
-    static let mediaTypesHeaderTitle = "Media Types"
-    static let utilitiesHeaderTitle = "Utilities"
-
-    static let peopleAndPlacesSectionItemsCount = 2
-}
-
 final class AlbumsViewController: UIViewController {
     private var albums: [[Album]]?
 
@@ -171,7 +153,7 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     ) -> UICollectionReusableView {
 
         let header = collectionView.dequeueReusableSupplementaryView(
-            ofKind: ElementKind.sectionHeader,
+            ofKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: AlbumsSectionHeader.identifier,
             for: indexPath
         ) as? AlbumsSectionHeader
@@ -194,4 +176,22 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
         return header ?? AlbumsSectionHeader()
     }
+}
+
+// MARK: - Constants
+
+enum AlbumsViewControllerConstants {
+    static let myAlbumsSectionNumber = 0
+    static let peopleAndPlacesSectionNumber = 1
+    static let mediaTypesSectionNumber = 2
+    static let utilitiesSectionNumber = 3
+}
+
+fileprivate enum Constants {
+    static let myAlbumsSectionHeaderTitle = "My Albums"
+    static let peopleAndPlacesSectionHeaderTitle = "People & Places"
+    static let mediaTypesHeaderTitle = "Media Types"
+    static let utilitiesHeaderTitle = "Utilities"
+
+    static let peopleAndPlacesSectionItemsCount = 2
 }
