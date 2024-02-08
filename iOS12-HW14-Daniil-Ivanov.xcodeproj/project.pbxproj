@@ -7,23 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007C06F82B737DBB000BF046 /* TitleSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C06F72B737DBB000BF046 /* TitleSubtitleView.swift */; };
+		007C06FE2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C06FD2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift */; };
 		00BE616C2B70DBC2005E2C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */; };
 		00BE616E2B70DBC2005E2C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */; };
-		00BE61702B70DBC2005E2C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616F2B70DBC2005E2C42 /* ViewController.swift */; };
-		00BE61732B70DBC2005E2C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE61712B70DBC2005E2C42 /* Main.storyboard */; };
+		00BE61702B70DBC2005E2C42 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */; };
 		00BE61752B70DBC4005E2C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE61742B70DBC4005E2C42 /* Assets.xcassets */; };
 		00BE61782B70DBC4005E2C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */; };
+		00BE61892B70DF27005E2C42 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61882B70DF27005E2C42 /* AlbumsView.swift */; };
+		00BE618B2B70E392005E2C42 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618A2B70E392005E2C42 /* Album.swift */; };
+		00BE618E2B70E683005E2C42 /* AlbumsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */; };
+		00BE61902B70EEC4005E2C42 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */; };
+		00BE61932B70F050005E2C42 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 00BE61922B70F050005E2C42 /* SnapKit */; };
+		00BE61962B7103E8005E2C42 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61952B7103E8005E2C42 /* TabBarController.swift */; };
+		00BE61982B71057F005E2C42 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61972B71057F005E2C42 /* EmptyViewController.swift */; };
+		00BE619A2B7113A9005E2C42 /* AlbumsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */; };
+		00BE619E2B7231F4005E2C42 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE619D2B7231F4005E2C42 /* PeopleCollectionViewCell.swift */; };
+		00BE61A02B7237D0005E2C42 /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE619F2B7237D0005E2C42 /* PlacesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007C06F72B737DBB000BF046 /* TitleSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleView.swift; sourceTree = "<group>"; };
+		007C06FD2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypesAndUtilitiesCollectionViewListCell.swift; sourceTree = "<group>"; };
 		00BE61682B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW14-Daniil-Ivanov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00BE616F2B70DBC2005E2C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00BE61722B70DBC2005E2C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		00BE61742B70DBC4005E2C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00BE61772B70DBC4005E2C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE61792B70DBC4005E2C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00BE61882B70DF27005E2C42 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		00BE618A2B70E392005E2C42 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsFactory.swift; sourceTree = "<group>"; };
+		00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		00BE61952B7103E8005E2C42 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		00BE61972B71057F005E2C42 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsSectionHeader.swift; sourceTree = "<group>"; };
+		00BE619D2B7231F4005E2C42 /* PeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewCell.swift; sourceTree = "<group>"; };
+		00BE619F2B7237D0005E2C42 /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BE61932B70F050005E2C42 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,113 @@
 		00BE616A2B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov */ = {
 			isa = PBXGroup;
 			children = (
-				00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */,
-				00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */,
-				00BE616F2B70DBC2005E2C42 /* ViewController.swift */,
-				00BE61712B70DBC2005E2C42 /* Main.storyboard */,
-				00BE61742B70DBC4005E2C42 /* Assets.xcassets */,
-				00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */,
-				00BE61792B70DBC4005E2C42 /* Info.plist */,
+				00BE617F2B70DCE3005E2C42 /* Sources */,
+				00BE61812B70DCF4005E2C42 /* Resources */,
 			);
 			path = "iOS12-HW14-Daniil-Ivanov";
+			sourceTree = "<group>";
+		};
+		00BE617F2B70DCE3005E2C42 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61942B7103CE005E2C42 /* TabBar */,
+				00BE61842B70DE76005E2C42 /* Photos */,
+				00BE61802B70DCEB005E2C42 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		00BE61802B70DCEB005E2C42 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00BE616B2B70DBC2005E2C42 /* AppDelegate.swift */,
+				00BE616D2B70DBC2005E2C42 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		00BE61812B70DCF4005E2C42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61742B70DBC4005E2C42 /* Assets.xcassets */,
+				00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */,
+				00BE61822B70DCFE005E2C42 /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00BE61822B70DCFE005E2C42 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61792B70DBC4005E2C42 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		00BE61832B70DE64005E2C42 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618C2B70E66B005E2C42 /* Helpers */,
+				00BE61872B70DEFD005E2C42 /* Model */,
+				00BE61862B70DEF4005E2C42 /* Controller */,
+				00BE61852B70DEEE005E2C42 /* View */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		00BE61842B70DE76005E2C42 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61832B70DE64005E2C42 /* Albums */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		00BE61852B70DEEE005E2C42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61882B70DF27005E2C42 /* AlbumsView.swift */,
+				00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */,
+				00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */,
+				00BE619D2B7231F4005E2C42 /* PeopleCollectionViewCell.swift */,
+				00BE619F2B7237D0005E2C42 /* PlacesCollectionViewCell.swift */,
+				007C06F72B737DBB000BF046 /* TitleSubtitleView.swift */,
+				007C06FD2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00BE61862B70DEF4005E2C42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BE616F2B70DBC2005E2C42 /* AlbumsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		00BE61872B70DEFD005E2C42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618A2B70E392005E2C42 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00BE618C2B70E66B005E2C42 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618D2B70E683005E2C42 /* AlbumsFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		00BE61942B7103CE005E2C42 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				00BE61952B7103E8005E2C42 /* TabBarController.swift */,
+				00BE61972B71057F005E2C42 /* EmptyViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +203,9 @@
 			dependencies = (
 			);
 			name = "iOS12-HW14-Daniil-Ivanov";
+			packageProductDependencies = (
+				00BE61922B70F050005E2C42 /* SnapKit */,
+			);
 			productName = "iOS12-HW14-Daniil-Ivanov";
 			productReference = 00BE61682B70DBC2005E2C42 /* iOS12-HW14-Daniil-Ivanov.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 00BE615F2B70DBC2005E2C42;
+			packageReferences = (
+				00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 00BE61692B70DBC2005E2C42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +253,6 @@
 			files = (
 				00BE61782B70DBC4005E2C42 /* LaunchScreen.storyboard in Resources */,
 				00BE61752B70DBC4005E2C42 /* Assets.xcassets in Resources */,
-				00BE61732B70DBC2005E2C42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +263,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BE61702B70DBC2005E2C42 /* ViewController.swift in Sources */,
+				007C06F82B737DBB000BF046 /* TitleSubtitleView.swift in Sources */,
+				00BE61702B70DBC2005E2C42 /* AlbumsViewController.swift in Sources */,
 				00BE616C2B70DBC2005E2C42 /* AppDelegate.swift in Sources */,
+				00BE619A2B7113A9005E2C42 /* AlbumsSectionHeader.swift in Sources */,
+				00BE618E2B70E683005E2C42 /* AlbumsFactory.swift in Sources */,
+				00BE619E2B7231F4005E2C42 /* PeopleCollectionViewCell.swift in Sources */,
+				00BE61892B70DF27005E2C42 /* AlbumsView.swift in Sources */,
 				00BE616E2B70DBC2005E2C42 /* SceneDelegate.swift in Sources */,
+				007C06FE2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift in Sources */,
+				00BE618B2B70E392005E2C42 /* Album.swift in Sources */,
+				00BE61A02B7237D0005E2C42 /* PlacesCollectionViewCell.swift in Sources */,
+				00BE61982B71057F005E2C42 /* EmptyViewController.swift in Sources */,
+				00BE61962B7103E8005E2C42 /* TabBarController.swift in Sources */,
+				00BE61902B70EEC4005E2C42 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00BE61712B70DBC2005E2C42 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00BE61722B70DBC2005E2C42 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00BE61762B70DBC4005E2C42 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,12 +422,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LLM6YPG7Q7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +435,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iOS12-HW14-Daniil-Ivanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,12 +454,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LLM6YPG7Q7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW14-Daniil-Ivanov/Resources/Configuration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +467,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iOS12-HW14-Daniil-Ivanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +499,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00BE61922B70F050005E2C42 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00BE61912B70F050005E2C42 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00BE61602B70DBC2005E2C42 /* Project object */;
 }
