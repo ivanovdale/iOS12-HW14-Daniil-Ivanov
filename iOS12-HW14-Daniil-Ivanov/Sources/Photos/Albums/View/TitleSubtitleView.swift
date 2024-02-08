@@ -12,6 +12,7 @@ fileprivate enum Constants {
     static let titleFont = UIFont.systemFont(ofSize: 14)
     static let subtitleFont = UIFont.systemFont(ofSize: 15)
     static let subtitleTextColor = UIColor.lightGray
+    static let subtitleOffset = 1.0
 }
 
 
@@ -44,13 +45,6 @@ class TitleSubtitleView: UIView {
         return label
     }()
 
-    private lazy var mainStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
-        stack.axis = .vertical
-        stack.spacing = 1
-        return stack
-    }()
-
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -66,12 +60,17 @@ class TitleSubtitleView: UIView {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        addSubview(mainStack)
+        [titleLabel, subtitleLabel].forEach { addSubview($0) }
     }
 
     private func setupLayout() {
-        mainStack.snp.makeConstraints { make in
-            make.leading.top.trailing.bottom.equalTo(self)
+        titleLabel.snp.makeConstraints { make in
+            make.leading.top.trailing.equalTo(self)
+        }
+        
+        subtitleLabel.snp.makeConstraints { make in
+            make.leading.trailing.equalTo(self)
+            make.top.equalTo(titleLabel.snp.bottom).offset(Constants.subtitleOffset)
         }
     }
 

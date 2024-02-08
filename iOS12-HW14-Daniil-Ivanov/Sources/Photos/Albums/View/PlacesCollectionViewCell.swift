@@ -95,16 +95,19 @@ final class PlacesCollectionViewCell: UICollectionViewCell {
     private func setupLayout() {
         mapImageView.snp.makeConstraints { make in
             make.leading.top.trailing.equalTo(self)
-            make.bottom.equalTo(titleSubtitleView.snp.top).offset(-Constants.titleSubtitleOffset)
             make.width.equalTo(mapImageView.snp.height)
         }
+
         titleSubtitleView.snp.makeConstraints { make in
-            make.leading.trailing.equalTo(self)
+            make.leading.trailing.bottom.equalTo(self)
+            make.top.equalTo(mapImageView.snp.bottom).offset(Constants.titleSubtitleOffset)
         }
+
         mainImageView.snp.makeConstraints { make in
             make.center.equalTo(mapImageView)
             make.height.width.equalTo(mapImageView).dividedBy(Constants.mainImageHeightScale)
         }
+
         triangleImageView.snp.makeConstraints { make in
             make.top.equalTo(mainImageView.snp.bottom).offset(-8)
             make.centerX.equalTo(mainImageView.snp.centerX)

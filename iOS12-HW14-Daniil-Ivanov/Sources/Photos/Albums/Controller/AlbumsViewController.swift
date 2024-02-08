@@ -98,12 +98,14 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
             let myAlbumsMainPhotos = myAlbums.map { $0.mainPhotoName }
             cell?.photoCount = myAlbums.compactMap { $0.photoCount }.reduce(0, +)
             cell?.mainImageName = myAlbumsMainPhotos[Int.random(in: 0..<myAlbumsMainPhotos.count)]
+
             return cell ?? PlacesCollectionViewCell()
         } else {
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PeopleCollectionViewCell.identifier,
                 for: indexPath) as? PeopleCollectionViewCell
             cell?.data = albums?[indexPath.section]
+            
             return cell ?? PeopleCollectionViewCell()
         }
     }

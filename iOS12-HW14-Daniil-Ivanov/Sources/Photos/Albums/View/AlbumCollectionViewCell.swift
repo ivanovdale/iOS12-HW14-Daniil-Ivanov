@@ -12,7 +12,6 @@ fileprivate enum Constants {
     static let titleFont = UIFont.systemFont(ofSize: 14)
     static let countFont = UIFont.systemFont(ofSize: 15)
     static let countTextColor = UIColor.lightGray
-    static let imageSizeMultiplier = 0.8
     static let imageCornerRadius = 4.0
     static let favoriteImageName = "heart.fill"
     static let favoriteImageViewOffset = 5.0
@@ -75,14 +74,15 @@ class AlbumCollectionViewCell: UICollectionViewCell {
 
     private func setupLayout() {
         imageView.snp.makeConstraints { make in
-            make.top.equalTo(self)
-            make.height.equalTo(self).multipliedBy(Constants.imageSizeMultiplier)
+            make.leading.top.trailing.equalTo(self)
             make.width.equalTo(imageView.snp.height)
         }
+
         titleSubtitleView.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(Constants.titleSubtitleOffset)
-            make.leading.bottom.equalTo(self)
+            make.leading.trailing.bottom.equalTo(self)
         }
+        
         favoriteImageView.snp.makeConstraints { make in
             make.leading.equalTo(imageView).offset(Constants.favoriteImageViewOffset)
             make.bottom.equalTo(imageView).offset(-Constants.favoriteImageViewOffset)

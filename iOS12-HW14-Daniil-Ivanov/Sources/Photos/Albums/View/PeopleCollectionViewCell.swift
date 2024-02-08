@@ -99,11 +99,12 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
     private func setupLayout() {
         mainStack.snp.makeConstraints { make in
             make.leading.top.trailing.equalTo(self)
-            make.bottom.equalTo(titleSubtitleView.snp.top).offset(-Constants.titleSubtitleOffset)
             make.width.equalTo(mainStack.snp.height)
         }
+        
         titleSubtitleView.snp.makeConstraints { make in
-            make.leading.trailing.equalTo(self)
+            make.leading.trailing.bottom.equalTo(self)
+            make.top.equalTo(mainStack.snp.bottom).offset(Constants.titleSubtitleOffset)
         }
 
     }
