@@ -46,6 +46,7 @@ class AlbumsView: UIView {
             make.leading.top.trailing.bottom.equalTo(self)
         }
     }
+    
     // MARK: - Collection view configuration
 
     func configureCollectionView(dataSource: UICollectionViewDataSource, delegate: UICollectionViewDelegate) {
@@ -89,11 +90,10 @@ class AlbumsView: UIView {
         }
 
         func createPeopleAndPlacesLayoutSection() -> NSCollectionLayoutSection {
-            let peopleItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+            let peopleItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2), heightDimension: .fractionalHeight(1))
             let peopleLayoutItem = NSCollectionLayoutItem(layoutSize: peopleItemSize)
-            peopleLayoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 2)
 
-            let placesItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.4), heightDimension: .fractionalWidth(1 / 2))
+            let placesItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1 / 2.2), heightDimension: .fractionalHeight(1))
             let placesLayoutItem = NSCollectionLayoutItem(layoutSize: placesItemSize)
 
             let peopleAndPlacesGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1 / 2.05))
@@ -101,6 +101,7 @@ class AlbumsView: UIView {
                 layoutSize: peopleAndPlacesGroupSize,
                 subitems: [peopleLayoutItem, placesLayoutItem]
             )
+            peopleAndPlacesLayoutGroup.interItemSpacing = .fixed(5)
 
             let layoutSectionHeader = createLayoutSectionHeader()
             let layoutSection = NSCollectionLayoutSection(group: peopleAndPlacesLayoutGroup)
@@ -123,9 +124,4 @@ class AlbumsView: UIView {
             return layoutSectionHeader
         }
     }
-}
-
-
-#Preview {
-    AlbumsViewController()
 }

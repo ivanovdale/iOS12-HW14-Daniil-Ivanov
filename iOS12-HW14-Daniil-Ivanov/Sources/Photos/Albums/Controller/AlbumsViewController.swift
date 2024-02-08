@@ -10,6 +10,7 @@ import UIKit
 fileprivate enum Constants {
     static let myAlbumsSectionHeaderTitle = "My Albums"
     static let peopleAndPlacesSectionHeaderTitle = "People & Places"
+    static let myAlbumsSectionNumber = 0
     static let peopleAndPlacesSectionNumber = 1
     static let peopleAndPlacesSectionItemsNumber = 2
 }
@@ -90,10 +91,18 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     private func createPeopleOrPlacesViewCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == Constants.peopleAndPlacesSectionItemsNumber - 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PlacesCollectionViewCell.identifier,
+                for: indexPath) as? PlacesCollectionViewCell
+            let myAlbums = albums?[Constants.myAlbumsSectionNumber] ?? []
+            let myAlbumsMainPhotos = myAlbums.map { $0.mainPhotoName }
+            cell?.photoCount = myAlbums.compactMap { $0.photoCount }.reduce(0, +)
+            cell?.mainImageName = myAlbumsMainPhotos[Int.random(in: 0..<myAlbumsMainPhotos.count)]
             return cell ?? PlacesCollectionViewCell()
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PeopleCollectionViewCell.identifier, for: indexPath) as? PeopleCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PeopleCollectionViewCell.identifier,
+                for: indexPath) as? PeopleCollectionViewCell
             cell?.data = albums?[indexPath.section]
             return cell ?? PeopleCollectionViewCell()
         }
