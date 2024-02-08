@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 
+typealias VoidClosure = () -> Void
+
 final class AlbumsSectionHeader: UICollectionReusableView {
     static let identifier = "MyAlbumsSectionHeader"
 
@@ -20,6 +22,16 @@ final class AlbumsSectionHeader: UICollectionReusableView {
     var title: String? {
         didSet {
             titleLabel.text = title
+        }
+    }
+
+    var onButtonPressed: VoidClosure? {
+        didSet {
+            seeAllButton.addTarget(
+                self,
+                action: #selector(onSeeAllButtonPressed), 
+                for: .touchUpInside
+            )
         }
     }
 
@@ -83,6 +95,12 @@ final class AlbumsSectionHeader: UICollectionReusableView {
         super.prepareForReuse()
         titleLabel.text = nil
         seeAllButton.isHidden = true
+    }
+
+    // MARK: - Actions
+
+    @objc private func onSeeAllButtonPressed() {
+        onButtonPressed?()
     }
 }
 

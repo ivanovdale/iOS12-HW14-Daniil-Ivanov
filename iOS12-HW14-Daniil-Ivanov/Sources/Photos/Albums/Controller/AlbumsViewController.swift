@@ -106,7 +106,7 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         indexPath: IndexPath
     ) -> UICollectionViewCell {
 
-        if indexPath.item == Constants.peopleAndPlacesSectionItemsCount - 1 {
+        if indexPath == Constants.placesSectionItem {
 
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PlacesCollectionViewCell.identifier,
@@ -162,6 +162,7 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         case AlbumsViewControllerConstants.myAlbumsSectionNumber:
             header?.isSeeAllButtonHidden = false
             header?.title = Constants.myAlbumsSectionHeaderTitle
+            header?.onButtonPressed = { print("See all button pressed") }
         case AlbumsViewControllerConstants.peopleAndPlacesSectionNumber:
             header?.isSeeAllButtonHidden = true
             header?.title = Constants.peopleAndPlacesSectionHeaderTitle
@@ -175,6 +176,26 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
 
         return header ?? AlbumsSectionHeader()
+    }
+
+    // MARK: - Item selection
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath == Constants.placesSectionItem {
+            print("Places item pressed")
+        } else if indexPath == Constants.peopleSectionItem {
+            print("Peoples item pressed")
+        } else {
+            let item = albums?[indexPath.section][indexPath.item]
+            guard let item else { return }
+            print("Item \(item.title ?? "") pressed")
+        }
+
+        if indexPath.section == AlbumsViewControllerConstants.mediaTypesSectionNumber ||
+            indexPath.section == AlbumsViewControllerConstants.utilitiesSectionNumber {
+
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
     }
 }
 
@@ -194,4 +215,6 @@ fileprivate enum Constants {
     static let utilitiesHeaderTitle = "Utilities"
 
     static let peopleAndPlacesSectionItemsCount = 2
+    static let peopleSectionItem = IndexPath(item: 0, section: AlbumsViewControllerConstants.peopleAndPlacesSectionNumber)
+    static let placesSectionItem = IndexPath(item: 1, section: AlbumsViewControllerConstants.peopleAndPlacesSectionNumber)
 }
