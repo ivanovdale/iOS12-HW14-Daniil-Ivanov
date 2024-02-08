@@ -19,7 +19,7 @@ fileprivate enum Constants {
     static let titleSubtitleOffset = 5.0
 }
 
-class AlbumCollectionViewCell: UICollectionViewCell {
+final class AlbumCollectionViewCell: UICollectionViewCell {
     static let identifier = "AlbumCollectionViewCell"
 
     var data: Album? {

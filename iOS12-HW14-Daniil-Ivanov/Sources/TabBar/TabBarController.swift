@@ -26,7 +26,7 @@ fileprivate enum Constants {
     static let searchSelectedImageName = "magnifyingglass.fill"
 }
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
 
     // MARK: - Lifecycle
 

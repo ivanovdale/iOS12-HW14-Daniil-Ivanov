@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class AlbumsView: UIView {
+final class AlbumsView: UIView {
 
     // MARK: - Outlets
 

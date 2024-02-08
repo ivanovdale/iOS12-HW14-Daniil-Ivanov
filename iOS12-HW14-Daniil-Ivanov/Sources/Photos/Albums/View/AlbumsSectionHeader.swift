@@ -21,7 +21,7 @@ enum ElementKind {
     static let sectionHeader = "section-header-element-kind"
 }
 
-class AlbumsSectionHeader: UICollectionReusableView {
+final class AlbumsSectionHeader: UICollectionReusableView {
     static let identifier = "MyAlbumsSectionHeader"
 
     var isSeeAllButtonHidden: Bool = true {

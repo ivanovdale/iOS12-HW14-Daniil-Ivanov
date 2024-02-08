@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmptyViewController: UIViewController {
+final class EmptyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

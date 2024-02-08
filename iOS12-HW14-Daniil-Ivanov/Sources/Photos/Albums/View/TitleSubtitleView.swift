@@ -16,7 +16,7 @@ fileprivate enum Constants {
 }
 
 
-class TitleSubtitleView: UIView {
+final class TitleSubtitleView: UIView {
 
     var title: String? {
         didSet {
