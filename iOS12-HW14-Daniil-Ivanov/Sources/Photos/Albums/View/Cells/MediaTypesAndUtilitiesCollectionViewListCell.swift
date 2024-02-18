@@ -31,6 +31,13 @@ final class MediaTypesAndUtilitiesCollectionViewListCell: UICollectionViewListCe
 
     private func setupView() {
         setupDisclosureIndicator()
+        setupBackground()
+    }
+
+    private func setupBackground() {
+        var backgroundConfig = UIBackgroundConfiguration.listGroupedCell()
+        backgroundConfig.backgroundColor = .clear
+        self.backgroundConfiguration = backgroundConfig
     }
 
     private func setupDisclosureIndicator() {

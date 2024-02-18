@@ -169,22 +169,7 @@ final class AlbumsView: UIView {
             sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment
         ) -> NSCollectionLayoutSection {
-
-            // Hide last item separators.
-
-            // TODO: Хардкод... не знаю, как можно нормально обыграть этот момент с последними элементами секции.
-            let indexPathToHideMidiaTypes = IndexPath(item: 10, section: AlbumsViewControllerConstants.mediaTypesSectionNumber)
-            let indexPathToHideUtilities = IndexPath(item: 2, section: AlbumsViewControllerConstants.utilitiesSectionNumber)
-
-            var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-            configuration.itemSeparatorHandler = { (indexPath, sectionSeparatorConfiguration) in
-                var configuration = sectionSeparatorConfiguration
-                if indexPath == indexPathToHideMidiaTypes || indexPath == indexPathToHideUtilities {
-                    configuration.bottomSeparatorVisibility = .hidden
-                }
-                return configuration
-            }
-
+            let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
 
             let layoutSection = NSCollectionLayoutSection.list(
                 using: configuration,
