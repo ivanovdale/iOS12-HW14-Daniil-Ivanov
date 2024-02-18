@@ -133,30 +133,25 @@ final class AlbumsView: UIView {
         }
 
         func createPeopleAndPlacesLayoutSection() -> NSCollectionLayoutSection {
-            let peopleItemSize = NSCollectionLayoutSize(
+            let itemSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1 / 2.2),
                 heightDimension: .fractionalHeight(1)
             )
-            let peopleLayoutItem = NSCollectionLayoutItem(layoutSize: peopleItemSize)
+            let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
 
-            let placesItemSize = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1 / 2.2),
-                heightDimension: .fractionalHeight(1)
-            )
-            let placesLayoutItem = NSCollectionLayoutItem(layoutSize: placesItemSize)
-
-            let peopleAndPlacesGroupSize = NSCollectionLayoutSize(
+            let groupSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
                 heightDimension: .fractionalWidth(1 / 2.05)
             )
-            let peopleAndPlacesLayoutGroup = NSCollectionLayoutGroup.horizontal(
-                layoutSize: peopleAndPlacesGroupSize,
-                subitems: [peopleLayoutItem, placesLayoutItem]
+            let layoutGroup = NSCollectionLayoutGroup.horizontal(
+                layoutSize: groupSize,
+                repeatingSubitem: layoutItem,
+                count: 2
             )
-            peopleAndPlacesLayoutGroup.interItemSpacing = .fixed(5)
+            layoutGroup.interItemSpacing = .fixed(5)
 
             let layoutSectionHeader = createLayoutSectionHeader()
-            let layoutSection = NSCollectionLayoutSection(group: peopleAndPlacesLayoutGroup)
+            let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
             layoutSection.orthogonalScrollingBehavior = .continuous
             layoutSection.contentInsets = NSDirectionalEdgeInsets(
                 top: 0,
@@ -174,22 +169,7 @@ final class AlbumsView: UIView {
             sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment
         ) -> NSCollectionLayoutSection {
-
-            // Hide last item separators.
-
-            // TODO: Хардкод... не знаю, как можно нормально обыграть этот момент с последними элементами секции.
-            let indexPathToHideMidiaTypes = IndexPath(item: 10, section: AlbumsViewControllerConstants.mediaTypesSectionNumber)
-            let indexPathToHideUtilities = IndexPath(item: 2, section: AlbumsViewControllerConstants.utilitiesSectionNumber)
-
-            var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-            configuration.itemSeparatorHandler = { (indexPath, sectionSeparatorConfiguration) in
-                var configuration = sectionSeparatorConfiguration
-                if indexPath == indexPathToHideMidiaTypes || indexPath == indexPathToHideUtilities {
-                    configuration.bottomSeparatorVisibility = .hidden
-                }
-                return configuration
-            }
-
+            let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
 
             let layoutSection = NSCollectionLayoutSection.list(
                 using: configuration,

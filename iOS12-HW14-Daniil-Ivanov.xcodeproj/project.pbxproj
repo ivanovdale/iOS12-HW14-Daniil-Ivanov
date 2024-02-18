@@ -59,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C07892B827C79000BF046 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */,
+				00BE619D2B7231F4005E2C42 /* PeopleCollectionViewCell.swift */,
+				00BE619F2B7237D0005E2C42 /* PlacesCollectionViewCell.swift */,
+				007C06F72B737DBB000BF046 /* TitleSubtitleView.swift */,
+				007C06FD2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		00BE615F2B70DBC2005E2C42 = {
 			isa = PBXGroup;
 			children = (
@@ -144,12 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				00BE61882B70DF27005E2C42 /* AlbumsView.swift */,
-				00BE618F2B70EEC4005E2C42 /* AlbumCollectionViewCell.swift */,
+				007C07892B827C79000BF046 /* Cells */,
 				00BE61992B7113A9005E2C42 /* AlbumsSectionHeader.swift */,
-				00BE619D2B7231F4005E2C42 /* PeopleCollectionViewCell.swift */,
-				00BE619F2B7237D0005E2C42 /* PlacesCollectionViewCell.swift */,
-				007C06F72B737DBB000BF046 /* TitleSubtitleView.swift */,
-				007C06FD2B74F32B000BF046 /* MediaTypesAndUtilitiesCollectionViewListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
